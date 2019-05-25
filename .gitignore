@@ -4,3 +4,6 @@ Backup/
 obj/
 App.config
 CsBot.exe.config
+.DS_Store
+.vs
+.suo
