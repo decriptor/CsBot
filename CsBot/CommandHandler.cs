@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
-using System.Threading;
-using System.Net;
-using System.Xml;
-using System.ServiceModel.Syndication;
 using System.Linq;
+using System.Net;
+using System.ServiceModel.Syndication;
+using System.Threading;
+using System.Xml;
 
 namespace CsBot
 {

@@ -1,17 +1,18 @@
+using System;
+using System.Net;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
+using System.Net.Sockets;
+using System.IO;
+using System.Threading;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
+using System.Configuration;
+using CsBot;
+
 namespace IrcBot.cs
 {
-    using System;
-    using System.Net;
-    using System.Net.Security;
-    using System.Security.Cryptography.X509Certificates;
-    using System.Net.Sockets;
-    using System.IO;
-    using System.Threading;
-    using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.Runtime.Serialization.Json;
-    using System.Configuration;
-    using CsBot;
     
     /*
     * This program establishes a connection to irc server, joins a channel and greets every nickname that
