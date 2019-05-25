@@ -23,7 +23,7 @@ namespace CsBot
         public static StreamWriter writer;
         public static StreamReader reader;
         private static string m_addresser = "";
-        private static users m_users;
+        private static Users m_users;
         private static bool FarkleInSession = false;
         private static Dictionary<int, string> FarkleMembers = new Dictionary<int, string>();
         private static int NumOfFarkleMembers = 0;
@@ -36,7 +36,7 @@ namespace CsBot
 
         public CommandHandler()
         {
-            m_users = new users();
+            m_users = new Users();
             reader = null;
             writer = null;
         }
@@ -45,7 +45,7 @@ namespace CsBot
         {
             writer = w;
             reader = r;
-            m_users = new users();
+            m_users = new Users();
         }
 
         /// <summary>
@@ -953,7 +953,7 @@ namespace CsBot
         public static void UpdateUserName(string origUser, string newUser) {
             if (m_users.hasUser(origUser))
             {
-                user tempUser = m_users[origUser];
+                User tempUser = m_users[origUser];
                 m_users.removeUser(origUser);
                 m_users.addUser(newUser, tempUser);
                 Console.WriteLine("Updated username from " + origUser + " to " + newUser);

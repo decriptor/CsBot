@@ -1,16 +1,14 @@
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CsBot
 {
-    class users
+    class Users
     {
-        private Dictionary<string, user> m_users;
+        private Dictionary<string, User> m_users;
 
-        public users()
+        public Users()
         {
-            m_users = new System.Collections.Generic.Dictionary<string, user>();
+            m_users = new Dictionary<string, User>();
         }
 
         public bool hasUser(string user)
@@ -23,10 +21,10 @@ namespace CsBot
             m_users.Remove(user);
         }
 
-        public void addUser(string user, user tmpUser = null)
+        public void addUser(string user, User tmpUser = null)
         {
             if (tmpUser == null) {
-                tmpUser = new user();
+                tmpUser = new User();
                 tmpUser.Name = user;
             }
 
@@ -36,7 +34,7 @@ namespace CsBot
 
         public bool isPlayingRPS(out string playing_user)
         {
-            Dictionary<string, user>.KeyCollection.Enumerator e = m_users.Keys.GetEnumerator();
+            Dictionary<string, User>.KeyCollection.Enumerator e = m_users.Keys.GetEnumerator();
             e.MoveNext();
             for (int i = 0; i < m_users.Count; i++)
             {
@@ -52,7 +50,7 @@ namespace CsBot
         }
 
         public bool isOpponentPlayingRPS(string addresser, out string playing_user) {
-            Dictionary<string, user>.KeyCollection.Enumerator e = m_users.Keys.GetEnumerator();
+            Dictionary<string, User>.KeyCollection.Enumerator e = m_users.Keys.GetEnumerator();
             e.MoveNext();
             for (int i = 0; i < m_users.Count; i++)
             {
@@ -184,11 +182,11 @@ namespace CsBot
 
         public IEnumerator<string> GetEnumerator()
         {
-            Dictionary<string, user>.KeyCollection.Enumerator e = m_users.Keys.GetEnumerator();
+            Dictionary<string, User>.KeyCollection.Enumerator e = m_users.Keys.GetEnumerator();
             return e;
         }
 
-        public user this[string name]
+        public User this[string name]
         {
             get
             {
