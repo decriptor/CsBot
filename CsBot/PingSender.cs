@@ -1,4 +1,5 @@
-﻿using System.Threading;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CsBot
 {
@@ -7,35 +8,33 @@ namespace CsBot
     /// </summary>
     class PingSender
     {
-        static string PING = "PING :";
-        private Thread pingSender;
+        const string PING = "PING :";
+		const int PING_RATE = 15000;
+        readonly Thread pingSender;
+
+		IrcBot Bot { get; }
 
         // Empty constructor makes instance of Thread
-        public PingSender()
+        public PingSender(IrcBot bot)
         {
-            pingSender = new Thread(new ThreadStart(this.Run));
+			Bot = bot;
+            pingSender = new Thread(new ThreadStart(Run));
         }
 
-        // Starts the thread
-        public void Start()
-        {
-            pingSender.Start();
-        }
+		// Starts the thread
+		public void Start () => pingSender.Start ();
 
-        // Kills the thead
-        public void Stop()
-        {
-            pingSender.Abort();
-        }
+		// Kills the thead
+		public void Stop () => pingSender.Abort ();
 
-        // Send PING to irc server every 15 seconds
-        public void Run()
+		// Send PING to irc server every 15 seconds
+		public void Run()
         {
             while (true)
             {
-                IrcBot.writer.WriteLine(PING + IrcBot.settings.server);
-                IrcBot.writer.Flush();
-                Thread.Sleep(15000);
+                Bot.Writer.WriteLine(PING + Bot.Settings.server);
+                Bot.Writer.Flush();
+				Task.Delay (PING_RATE);
             }
         }
     }

@@ -1,7 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsBot", "CsBot\CsBot.csproj", "{EEF7008E-10F0-41A1-8115-FA10A3F9F276}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28924.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsBot", "CsBot\CsBot.csproj", "{EEF7008E-10F0-41A1-8115-FA10A3F9F276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsBot.Tests", "CsBot.Tests\CsBot.Tests.csproj", "{9B364125-DC80-4EC7-8084-8B54B583AE23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +17,15 @@ Global
 		{EEF7008E-10F0-41A1-8115-FA10A3F9F276}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEF7008E-10F0-41A1-8115-FA10A3F9F276}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEF7008E-10F0-41A1-8115-FA10A3F9F276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B364125-DC80-4EC7-8084-8B54B583AE23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B364125-DC80-4EC7-8084-8B54B583AE23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B364125-DC80-4EC7-8084-8B54B583AE23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B364125-DC80-4EC7-8084-8B54B583AE23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75E6182C-73A2-4758-875D-E54460BAF3E6}
 	EndGlobalSection
 EndGlobal

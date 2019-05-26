@@ -1,15 +1,47 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net472</TargetFramework>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
         <Company>PyrousNET</Company>
         <Copyright>Copyright © PyrousNET 2016</Copyright>
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+      <PackageReference Include="System.CommandLine.Experimental" Version="0.2.0-alpha.19174.3" />
+      <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+      <PackageReference Include="System.ServiceModel.Syndication" Version="4.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="System.Net.Http" />
       <Reference Include="System.ServiceModel" />
       <Reference Include="System.Configuration" />
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Remove="Commands\FarkleCommand.cs" />
+      <Compile Remove="Commands\RoShamBoCommand.cs" />
+      <Compile Remove="Commands\RssFeedCommand.cs" />
+      <Compile Remove="Commands\InsultCommand.cs" />
+      <Compile Remove="Commands\CaffeineCommand.cs" />
+      <Compile Remove="Commands\ApbCommand.cs" />
+      <Compile Remove="Commands\PraiseCommand.cs" />
+      <Compile Remove="Commands\QuoteCommand.cs" />
+      <Compile Remove="Commands\EmoteCommand.cs" />
+      <Compile Remove="Commands\StringReplaceCommand.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="Commands\FarkleCommand.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+      <None Include="Commands\RoShamBoCommand.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+      <None Include="Commands\RssFeedCommand.cs" />
+      <None Include="Commands\InsultCommand.cs" />
+      <None Include="Commands\CaffeineCommand.cs" />
+      <None Include="Commands\ApbCommand.cs" />
+      <None Include="Commands\PraiseCommand.cs" />
+      <None Include="Commands\QuoteCommand.cs" />
+      <None Include="Commands\EmoteCommand.cs" />
+      <None Include="Commands\StringReplaceCommand.cs" />
     </ItemGroup>
 </Project>

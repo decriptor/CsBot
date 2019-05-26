@@ -1,4 +1,4 @@
-{
+﻿{
     "server": "example.com",
     "password": "somebot",
     "port": 6667,
@@ -23,7 +23,7 @@
     ],
     "command_start": "~",
     "insults": [
-            "{0}, You know what's funny? Your weiner!",
+        "{0}, You know what's funny? Your weiner!",
         "{0}, Bite my shiny metal ass!",
         "Shut up {0} I know it!",
         "I think {0} is screwier than my aunt Rita... And she's a screw!",

@@ -2,24 +2,24 @@ using System.ServiceModel.Syndication;
 
 namespace CsBot
 {
-    class User
-    {
-        public string Name { get; set; }
+	class User
+	{
+		public string Name { get; set; }
 
-        public string Message { get; set; }
+		public string Message { get; set; }
 
-        public int RPS { get; set; } = -2;
+		public int RPS { get; set; } = -2;
 
-        public bool RPSFlag { get; set; } = false;
+		public bool RPSFlag { get; set; } = false;
 
-        public int FarkleValue { get; set; } = 0;
+		public int FarkleValue { get; set; } = 0;
 
-        public bool FarkleFlag { get; set; } = false;
+		public bool FarkleFlag { get; set; } = false;
 
-        public bool HasFarkleToken { get; set; } = false;
+		public bool HasFarkleToken { get; set; } = false;
 
-        public SyndicationFeed Feed { get; set; }
+		public SyndicationFeed Feed { get; set; }
 
-        public int FeedCount { get; set; }
-    }
+		public int FeedCount { get; set; }
+	}
 }
